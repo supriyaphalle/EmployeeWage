@@ -16,17 +16,17 @@ TotalWorkingDays=0
 
 function getWorkingHours(){
 
-		case $1 in
-   		  $isFullTime)
+	case $1 in
+	  $isFullTime)
                empHrs=8
             ;;
-     		   $isPartTime)
-               empHrs=4
+     $isPartTime)
+              empHrs=4
             ;;
      			 *)
                empHrs=0
-            ;;
-  		 esac
+           ;;
+ 	esac
 	echo $empHrs
 }
 
