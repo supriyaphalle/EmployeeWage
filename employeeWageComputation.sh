@@ -1,6 +1,8 @@
 #!/bin/bash 
 
 echo " Welcome to Employee Wage Computation Program"
+
+
 #Constants
 isPartTime=1;
 isFullTime=2;
