@@ -2,7 +2,7 @@
 
 echo " Welcome to Employee Wage Computation Program"
 
-
+declare -A empDailyWage
 #Constants
 isPartTime=1;
 isFullTime=2;
@@ -41,9 +41,9 @@ do
 	((TotalWorkingDays++))
 	workHours="$( getWorkingHours $((RANDOM%3)) )"
 	totalWorkHours=$(($totalWorkHours+$workHours))
-	empDailyWage[$totalWorkingDays]="$( calcDailyWage $workHours )"
-
+	empDailyWage[Day "$TotalWorkingDays"]="$( calcDailyWage $workHours )"
 done
 
 totalSalary="$( calcDailyWage $TotalWorkHours )";
 echo "Daily Wage " ${empDailyWage[@]}
+echo "All Keys " ${!empDailyWage[@]}
